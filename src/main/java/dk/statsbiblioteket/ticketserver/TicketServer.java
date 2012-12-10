@@ -12,7 +12,7 @@ public class TicketServer {
 
     public TicketServer() throws ExecutionException, InterruptedException {
         WebServer server = WebServers.createWebServer(8080);
-        server.add(new TicketHttpHandler("web"));
+        server.add(new TicketHttpHandler("web", new MockTicketValidator()));
         server.start().get();
     }
 }

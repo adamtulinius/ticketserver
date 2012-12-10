@@ -1,8 +1,5 @@
 package dk.statsbiblioteket.ticketserver;
 
-public class TicketValidator {
-    public boolean isValid(String ticket) {
-        System.out.println("Validating ticket: " + ticket);
-        return ticket.equals("aft");
-    }
+public interface TicketValidator {
+    public boolean isValid(String address, String resource, String ticket);
 }
